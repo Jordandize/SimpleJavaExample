@@ -4,9 +4,11 @@ import java.io.IOException;
 
 public class Example {
 	
+	/*private field*/
 	private int score;
 	
 	public Example() {
+		/*It is mean that object doesn't init yet*/
 		score = 0;
 	}
 	
@@ -26,6 +28,7 @@ public class Example {
 		score = 0;
 	}
 	
+	/*Write information about this object in file Example.txt*/
 	public void saveAsFile() {
 		try {
 			BufferedWriter wr = new BufferedWriter(new FileWriter("Example.txt"));
@@ -36,10 +39,20 @@ public class Example {
 		}
 	}
 	
+	/*Getter and Setter*/
+	public void setScore(int newScore) {
+		score = newScore;
+	}
+	
+	public int getScore() {
+		return score;
+	}
+	
 	public String toString() {
 		return "Example with score: " + score;
 	}
 
+	/*Test*/
 	public static void main(String[] args) {
 		Example ex = new Example();
 		ex.addScore(20);
