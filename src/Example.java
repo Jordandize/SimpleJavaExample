@@ -7,7 +7,7 @@ public class Example {
 	private int score;
 	
 	public Example() {
-		score = 0;
+		score = 450;
 	}
 	
 	public Example(int scoreAmount) {
